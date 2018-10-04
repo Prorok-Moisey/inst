@@ -1,0 +1,46 @@
+body{
+	font-family: arial, sans-serif;
+	font-size: small;
+	background-color: #fafafa;
+	margin: 0;
+	padding: 0;
+}
+.header_fixed{
+	display:flex;
+	max-width: 930px;
+	height: 77px;
+	flex-direction: row;
+	margin:auto;
+	padding: 0px 40px 0px 40px;	
+
+}
+.header{
+	width: 100vw;
+	height: 77px;
+	background-color: #ffffff;
+	border-bottom: 1px solid #e6e6e6;
+}
+.flex_line{
+	display: inline-flex;
+	align-items: center;
+	flex-grow: 1;
+}
+.header_fixed__logo{
+	justify-content: flex-start;
+}
+.header_fixed__icons{
+	justify-content: space-between;
+	max-width: 140px; 
+}
+
+.header_fixed__input input{
+	height: 28px; 
+	width:215px;
+}
+#logo1{
+	padding-right: 20px;
+}
+#logo2{
+	padding-left: 15px;
+	border-left: 1px solid black;
+}

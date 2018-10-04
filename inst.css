@@ -32,10 +32,19 @@ body{
 	justify-content: space-between;
 	max-width: 140px; 
 }
-
 .header_fixed__input input{
 	height: 28px; 
 	width:215px;
+	font-size: 14px;
+	border: 1px solid #e6e6e6;
+	outline: none;
+	background-image: url(images/loopa.png);
+	background-repeat: no-repeat;
+	background-position: 4% 50%;
+	padding-left: 30px;
+}
+.input_image{
+	filter: opacity(0.25);
 }
 #logo1{
 	padding-right: 20px;
@@ -43,4 +52,9 @@ body{
 #logo2{
 	padding-left: 15px;
 	border-left: 1px solid black;
+}
+/* магия для убирания рамки на кнопке*/
+::-moz-focus-outer, ::-moz-focus-inner{
+	border:0;
+	padding:0;
 }

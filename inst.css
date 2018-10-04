@@ -32,6 +32,9 @@ body{
 	justify-content: space-between;
 	max-width: 140px; 
 }
+.header_fixed__input{
+	position: relative;
+}
 .header_fixed__input input{
 	height: 28px; 
 	width:215px;
@@ -44,6 +47,8 @@ body{
 	padding-left: 30px;
 }
 .input_image{
+	position: absolute;
+	left: 220px;
 	filter: opacity(0.25);
 }
 #logo1{

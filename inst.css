@@ -79,8 +79,37 @@ body{
 	padding-left: 15px;
 	border-left: 1px solid black;
 	filter:opacity(0);
+}
 /* магия для убирания рамки на кнопке*/
 ::-moz-focus-outer, ::-moz-focus-inner{
 	border:0;
 	padding:0;
+}
+.footer{
+	max-width: 930px;
+	margin:auto;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 0px 20px 40px 40px;
+}
+.links{
+	flex-wrap: wrap;
+	justify-content: center;
+	word-spacing: 10px;
+	line-height: 2;
+}
+.common_link:link{
+	text-decoration: none;
+	color: #073b69;
+}
+.common_link:hover{
+	text-decoration: none;
+	color: #073b69;
+}
+.common_link:visited{
+	text-decoration: none;
+	color: #073b69;
+}
+.footer__string{
+	color: #a5999c;	
 }

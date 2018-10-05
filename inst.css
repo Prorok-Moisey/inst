@@ -11,15 +11,21 @@ body{
 	height: 77px;
 	flex-direction: row;
 	margin:auto;
-	padding: 0px 40px 0px 40px;	
-
+	padding: 0px 40px 0px 40px;
+	transition: all 0.4s;	
 }
-.header{
-	position: fixed;              /*типа фиксированный, но блочащий нахер всю страницу заголовок*/
+.header{				/*фиксированный заголовок*/
+	position: fixed;
+	top: 0;
 	width: 100vw;
 	height: 77px;
 	background-color: #ffffff;
 	border-bottom: 1px solid #e6e6e6;
+	transition: all 0.4s;
+}
+.header_scroll{			/*фиксированный заголовок во время скрола*/
+	height: 50px;	
+	transition: all 0.4s;
 }
 .flex_line{
 	display: inline-flex;
@@ -31,12 +37,12 @@ body{
 }
 .header_fixed__icons{
 	justify-content: space-between;
-	max-width: 140px; 
+	max-width:140px; 
 }
 .header_fixed__input{
 	position: relative;
 }
-.header_fixed__input input{      /*форма инпута, текста и лупы внутри*/
+.header_fixed__input input{			/*форма инпута, текста и лупы внутри*/
 	height: 28px; 
 	width:215px;
 	font-size: 14px;
@@ -48,26 +54,31 @@ body{
 	text-align: left;  */
 	padding-left: 30px;
 }
-.onfocus_input{                  /*Для установленного фокуса*/
+.onfocus_input{						/*Для установленного фокуса*/
 	background-position: 4% 50%;
 	text-align: left;
 }
-.onblur_input{                   /*Когда убираем фокус фокус*/
+.onblur_input{						/*Когда убираем фокус фокус*/
 	background-position: 40% 50%;
 	text-align: center;
 }
-.input_image{                    /*Положение крестика на краю инпута*/
+.input_image{						/*Положение крестика на краю инпута*/
 	position: absolute;
 	left: 220px;
 	filter: opacity(0.25);
 }
-#logo1{
+.logo1{
 	padding-right: 20px;
 }
-#logo2{
+.logo2{
 	padding-left: 15px;
 	border-left: 1px solid black;
+	transition: all 0.4s;
 }
+.logo2_scroll{
+	padding-left: 15px;
+	border-left: 1px solid black;
+	filter:opacity(0);
 /* магия для убирания рамки на кнопке*/
 ::-moz-focus-outer, ::-moz-focus-inner{
 	border:0;

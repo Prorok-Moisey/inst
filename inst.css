@@ -25,7 +25,7 @@ body{
 }
 .header_scroll{			/*фиксированный заголовок во время скрола*/
 	height: 50px;	
-	transition: all 0.4s;
+	transition: height 0.4s;
 }
 .flex_line{
 	display: inline-flex;
@@ -37,7 +37,8 @@ body{
 }
 .header_fixed__icons{
 	justify-content: space-between;
-	max-width:140px; 
+	max-width:140px;
+	min-width:140px; 
 }
 .header_fixed__input{
 	position: relative;
@@ -75,11 +76,6 @@ body{
 	border-left: 1px solid black;
 	transition: all 0.4s;
 }
-.logo2_scroll{
-	padding-left: 15px;
-	border-left: 1px solid black;
-	filter:opacity(0);
-}
 /* магия для убирания рамки на кнопке*/
 ::-moz-focus-outer, ::-moz-focus-inner{
 	border:0;
@@ -93,10 +89,11 @@ body{
 	padding: 0px 20px 40px 40px;
 }
 .links{
-	flex-wrap: wrap;
-	justify-content: center;
 	word-spacing: 10px;
 	line-height: 2;
+}
+.common_link{
+	word-spacing: normal;
 }
 .common_link:link{
 	text-decoration: none;
@@ -112,4 +109,28 @@ body{
 }
 .footer__string{
 	color: #a5999c;	
+}
+
+.text_center{				/*Для изменения футера на выравнивание по центру*/
+	text-align: center;
+}
+
+.container{					/*приступим к содержимому*/
+	padding: 140px 40px 0px 60px;
+	font-size: 16px;
+
+}
+.nat_logo{
+	float:left;
+	border: 1px solid #e6e6e6;
+	border-radius: 100px; 
+}
+.container__info{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	max-width: 888px;
+}
+.inline{					/*не хотите записаться в стоку? тогда мы идём к вам!*/
+	display: inline-block;
 }

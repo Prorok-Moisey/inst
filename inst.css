@@ -30,7 +30,7 @@ body{
 	transition: height 0.4s;
 }
 .flex_line{
-	display: inline-flex;
+	display: flex;
 	align-items: center;
 	flex-grow: 1;
 }
@@ -126,7 +126,7 @@ body{
 	padding-left: 20px;
 }
 .nat_logo_flex{
-	display: inline-flex;
+	display: flex;
 	flex-grow: 1;
 	margin-right: 30px;
 	justify-content: center;
@@ -140,14 +140,13 @@ body{
 	border-radius: 100px; 
 }
 .container__info{
-	display: inline-flex;
+	display: flex;
 	flex-direction: column;
 	flex-grow: 2;
 	justify-content: space-between;
 	align-items: flex-start;
 	max-width: 888px;
 	height: 170px;	
-	line-height: 2;
 }
 .inline{					/*не хотите записаться в стоку? тогда мы идём к вам!*/
 	display: inline-block;
@@ -160,16 +159,55 @@ body{
 	font-style: normal;	
 }
 .info_top{
+	display: inline-flex;
+	width: 408px;
 	height: 40px;
-	justify-content: flex-start;
-	align-items: flex-start;
+	justify-content: space-between;
+	align-items: center;
 }
+							/*кнопки из info_top*/
+.follow{
+	width: 96px;
+	height: 28px;
+	color:white;
+	font-size: 14px;
+	font-weight: bold;
+	background-color: #3897f0;
+	border:none;
+	border-radius: 3px;
+}
+.triangle{
+	width: 34px;
+	height: 28px;
+	color:white;
+	font-size: 10px;
+	font-weight: bold;
+	background-color: #3897f0;
+	border:none;
+	border-radius: 3px;
+}
+.points{
+	width: 40px;
+	height: 40px;
+	border:none;
+	background-color:#fafafa;
+	font-size: 18px;
+	font-weight: bold;
+}
+							/*кнопки из info_top*/
 .info_links{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 360px;
 	height: 18px;
 }
 .info_description{
+	display: flex;
+	flex-direction: column;
+	justify-content:center;
 	height: 72px;
-	line-height: 0.5;
+	line-height: 0.5!important;
 }
 							/*строка с историями*/
 .histories{

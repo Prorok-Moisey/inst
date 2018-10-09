@@ -94,6 +94,7 @@ body{
 }
 .common_link{
 	word-spacing: normal;
+	font-weight: bold;
 }
 .common_link:link{
 	text-decoration: none;
@@ -128,9 +129,31 @@ body{
 .container__info{
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
+	justify-content: space-between;
+	align-items: flex-start;
 	max-width: 888px;
+	height: 170px;	
+	line-height: 2;
 }
 .inline{					/*не хотите записаться в стоку? тогда мы идём к вам!*/
 	display: inline-block;
+}
+.normal_weight{				/*нормальная толщина букв*/
+	font-weight: normal;
+}
+.bold_weight{				/*жирные буквы*/
+	font-weight: bold;
+	font-style: normal;	
+}
+.info_top{
+	height: 40px;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+.info_links{
+	height: 18px;
+}
+.info_description{
+	height: 72px;
+	line-height: 0.5;
 }

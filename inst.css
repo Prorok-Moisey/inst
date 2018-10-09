@@ -7,9 +7,9 @@ body{
 }
 .header_fixed{
 	display:flex;
+	flex-direction: row;
 	max-width: 930px;
 	height: 77px;
-	flex-direction: row;
 	margin:auto;
 	padding: 0px 40px 0px 40px;
 	transition: all 0.4s;	
@@ -81,7 +81,7 @@ body{
 	border:0;
 	padding:0;
 }
-.footer{
+.footer{							/*форма и размеры футера*/
 	max-width: 930px;
 	margin:auto;
 	font-size: 12px;
@@ -92,7 +92,7 @@ body{
 	word-spacing: 10px;
 	line-height: 2;
 }
-.common_link{
+.common_link{						/*внешний вид ссылочек*/
 	word-spacing: normal;
 	font-weight: bold;
 }
@@ -107,8 +107,8 @@ body{
 .common_link:visited{
 	text-decoration: none;
 	color: #073b69;
-}
-.footer__string{
+}									/*внешний вид ссылочек*/
+.footer__string{ /*прозрачный серый шрифт*/
 	color: #a5999c;	
 }
 
@@ -121,14 +121,27 @@ body{
 	font-size: 16px;
 
 }
-.nat_logo{
+.container__head{			/*головная часть основы*/
+	display: flex;
+}
+.nat_logo_flex{
+	display: inline-flex;
+	flex-grow: 1;
+	margin-right: 30px;
+	justify-content: center;
+	align-items: flex-start;
+}
+.nat_logo_image{
 	float:left;
+}
+.circle_image{				/*скруглление картинок*/
 	border: 1px solid #e6e6e6;
 	border-radius: 100px; 
 }
 .container__info{
-	display: flex;
+	display: inline-flex;
 	flex-direction: column;
+	flex-grow: 2;
 	justify-content: space-between;
 	align-items: flex-start;
 	max-width: 888px;
@@ -157,3 +170,17 @@ body{
 	height: 72px;
 	line-height: 0.5;
 }
+							/*строка с историями*/
+.histories{
+	display: flex;
+	flex-direction: row;
+}
+.history1{
+	height: 76px;
+	width: 76px;
+}
+.history_text1{
+	font-size: 14px;
+	font-weight: bold;
+}
+							/*конец головной части основы*/

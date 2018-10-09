@@ -5,12 +5,14 @@ body{
 	margin: 0;
 	padding: 0;
 }
+.main_size{
+	max-width: 930px;
+	margin:auto;
+}
 .header_fixed{
 	display:flex;
 	flex-direction: row;
-	max-width: 930px;
 	height: 77px;
-	margin:auto;
 	padding: 0px 40px 0px 40px;
 	transition: all 0.4s;	
 }
@@ -82,8 +84,6 @@ body{
 	padding:0;
 }
 .footer{							/*форма и размеры футера*/
-	max-width: 930px;
-	margin:auto;
 	font-size: 12px;
 	font-weight: bold;
 	padding: 0px 20px 40px 40px;
@@ -117,12 +117,13 @@ body{
 }
 
 .container{					/*приступим к содержимому*/
-	padding: 140px 40px 0px 60px;
+	padding: 140px 40px 0px 20px;
 	font-size: 16px;
 
 }
 .container__head{			/*головная часть основы*/
 	display: flex;
+	padding-left: 20px;
 }
 .nat_logo_flex{
 	display: inline-flex;
@@ -174,12 +175,18 @@ body{
 .histories{
 	display: flex;
 	flex-direction: row;
+	padding: 50px 0px 0px 20px;
 }
 .history1{
 	height: 76px;
 	width: 76px;
 }
-.history_text1{
+.history_block1{
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+	height: 130px;
+	width: 130px;
 	font-size: 14px;
 	font-weight: bold;
 }

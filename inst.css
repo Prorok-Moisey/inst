@@ -207,7 +207,7 @@ body{
 	flex-direction: column;
 	justify-content:center;
 	height: 72px;
-	line-height: 0.5!important;
+	line-height: 1.5;
 }
 							/*строка с историями*/
 .histories{

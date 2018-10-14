@@ -8,6 +8,23 @@ $(document).ready(function(){
  	if ($(window).width() < 650){
  		$(".logo2").hide();
  	}
+ 	if ($(window).width() < 720){			//all sizes at small window
+ 			$(".main_style").attr('href','inst_small.css');
+ 			$(".info_links").hide();
+ 			$(".info_links_small").show();
+ 			$(".info_description").hide();
+ 			$(".info_description_small").show();
+ 			$(".delitel_text").hide(); 			
+ 	}
+ 	else{
+ 			$(".main_style").attr('href','inst.css');
+ 			$(".info_links").show();
+ 			$(".info_links_small").hide();
+ 			$(".info_description").show();
+ 			$(".info_description_small").hide();
+ 			$(".delitel_text").show();
+ 	}
+ 	alert($(document).outerHeight(true));
  									/*конец начальных установок*/
  	$("input").blur(function(){
  		$("input").removeClass("onfocus_input").addClass("onblur_input");//инпут без фокуса
@@ -33,17 +50,23 @@ $(document).ready(function(){
  			$(".header, .header_fixed").removeClass("header_scroll");
  			$(".logo2").animate({'opacity':'1'},0.4)
  		}
+ 	// добавление картиночек
+ 	//	if($(window).height() - $(window).scrollTop()<30){
+ 	//		alert('пора загрузиться');
+ 			//$('.trio').appendTo('.photos');
+ 	//	}
+
  	});
 
  	$(window).resize(function(){				//изменение ширины
- 		if ($(window).width() < 840){
+ 		if ($(window).width() < 840){			//footer
  			$(".footer__string, .links").addClass("text_center");
  		}
  		else{
  			$(".footer__string, .links").removeClass("text_center");
  		}
 
- 		if ($(window).width() < 650){
+ 		if ($(window).width() < 650){			//header fixed
  			$(".logo2").hide(400);
  		}
  		else{
@@ -56,6 +79,36 @@ $(document).ready(function(){
  		else{
  			$("input").show(400);	
  		}
+
+ 		if ($(window).width() < 400){
+ 			$(".normal_weight").addClass('width1');
+ 			$(".follow").addClass('width');
+ 		}
+ 		else{
+ 			$(".normal_weight").removeClass('width1');
+ 			$(".follow").removeClass('width');
+ 		}
+
+ 		if ($(window).width() < 720){			//all sizes at small window
+ 			$(".main_style").attr('href','inst_small.css');
+ 			$(".info_links").hide();
+ 			$(".info_links_small").show();
+ 			$(".info_description").hide();
+ 			$(".info_description_small").show();
+ 			$(".delitel_text").hide();
+
+ 			 			
+ 		}
+ 		else{
+ 			$(".main_style").attr('href','inst.css');
+ 			$(".info_links").show();
+ 			$(".info_links_small").hide();
+ 			$(".info_description").show();
+ 			$(".info_description_small").hide();
+ 			$(".delitel_text").show();
+ 			
+ 		}
+
  	});
 
 });

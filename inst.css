@@ -69,6 +69,7 @@ body{
 	position: absolute;
 	left: 220px;
 	filter: opacity(0.25);
+	pointer-events: none;	/*прозрачность для кликов и прочих событий*/
 }
 .logo1{
 	padding-right: 20px;

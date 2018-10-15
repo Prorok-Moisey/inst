@@ -24,22 +24,35 @@ $(document).ready(function(){
  			$(".info_description_small").hide();
  			$(".delitel_text").show();
  	}
- 	alert($(document).outerHeight(true));
+
  									/*конец начальных установок*/
- 	$("input").blur(function(){
- 		$("input").removeClass("onfocus_input").addClass("onblur_input");//инпут без фокуса
- 		$(".input_image").hide();
- 	});
 
- 	$("input").focus(function(){
- 		$("input").removeClass("onblur_input").addClass("onfocus_input");//инпут под фокусом
+ 	$("input").focus(function(){	//инпут под фокусом
+ 		$("input").removeClass("onblur_input").addClass("onfocus_input");
  		$(".input_image").show();
- 	});
 
- 	$(".input_image").click(function(){//нажатие на крестик
- 		alert('asdfg');
- 		$("input").reset();
- 	});
+ 		$("input").mousemove(function(event){	//ловим координату х по инпуту
+			var pos = $(this).offset();
+			var elem_left = pos.left.toFixed(0);
+			var x = event.pageX - elem_left;
+			$("#coords").html('Coords:' + x);
+			
+			$("input").click(function(){
+				if(x > 218){
+					//alert('aa');
+					$("input").val("");
+				
+				}
+			});			
+		});
+
+	});
+
+	$("input").blur(function(){		//инпут без фокуса
+ 		$("input").removeClass("onfocus_input").addClass("onblur_input");
+ 		$(".input_image").hide();
+	});
+		
 
  	$(window).scroll(function(){				//уменьшение фиксированного хэдера при скроле
  		if($(this).scrollTop()>1){
@@ -51,10 +64,6 @@ $(document).ready(function(){
  			$(".logo2").animate({'opacity':'1'},0.4)
  		}
  	// добавление картиночек
- 	//	if($(window).height() - $(window).scrollTop()<30){
- 	//		alert('пора загрузиться');
- 			//$('.trio').appendTo('.photos');
- 	//	}
 
  	});
 
@@ -109,6 +118,19 @@ $(document).ready(function(){
  			
  		}
 
+ 	});
+
+ 	$(".compas").click(function(){
+ 		window.location.href = 'https://www.instagram.com/explore/';
+ 	});
+ 	$(".logo1").click(function(){
+ 		window.location.href = 'https://www.instagram.com/';
+ 	});
+ 	$(".logo2").click(function(){
+ 		window.location.href = 'https://www.instagram.com/';
+ 	});
+ 	$(".man").click(function(){
+ 		window.location.href = 'https://www.instagram.com/prorok.moisey/';
  	});
 
 });

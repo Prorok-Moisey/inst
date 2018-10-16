@@ -1,4 +1,5 @@
-$(document).ready(function(){				
+$(document).ready(function(){	
+	var x=0;			
 									/*начальные установки*/
  	$("input").addClass("onblur_input");
  	$(".input_image").hide();
@@ -34,23 +35,31 @@ $(document).ready(function(){
  		$("input").mousemove(function(event){	//ловим координату х по инпуту
 			var pos = $(this).offset();
 			var elem_left = pos.left.toFixed(0);
-			var x = event.pageX - elem_left;
+			x = event.pageX - elem_left;
 			$("#coords").html('Coords:' + x);
-			
+		});	
 			$("input").click(function(){
 				if(x > 218){
 					//alert('aa');
 					$("input").val("");
-				
+					$("input").blur();
 				}
-			});			
-		});
+			});
 
+		if($("input").attr("placeholder") != 'Найти'){
+			$("input").val($("input").attr("placeholder"));
+ 			$("input").attr("placeholder",'Найти'); 
+ 		}
 	});
 
 	$("input").blur(function(){		//инпут без фокуса
  		$("input").removeClass("onfocus_input").addClass("onblur_input");
  		$(".input_image").hide();
+
+ 		if($('input').val()!=''){
+ 			$("input").attr("placeholder",$('input').val()); 
+ 			$("input").val("");
+ 		}
 	});
 		
 

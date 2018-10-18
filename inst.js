@@ -1,6 +1,18 @@
 $(document).ready(function(){	
-	var x=0;			
+	var x=0;
+	var count = 9;
+ 	var i = 0;
+ 	$(window).scrollTop(0);
+
 									/*начальные установки*/
+	if ($(window).width() < 400){
+ 		$(".normal_weight").addClass('width1');
+ 		$(".follow").addClass('width');
+ 	}
+ 	else{
+ 		$(".normal_weight").removeClass('width1');
+ 		$(".follow").removeClass('width');
+ 	}
  	$("input").addClass("onblur_input");
  	$(".input_image").hide();
  	if ($(window).width() < 500){
@@ -24,6 +36,19 @@ $(document).ready(function(){
  			$(".info_description").show();
  			$(".info_description_small").hide();
  			$(".delitel_text").show();
+ 	}
+ 	// добавление картиночек
+ 	var trigger = $(document).height() - $('.footer').height() - $(window).height() - $(window).scrollTop();
+ 	if ( (trigger < $('.trio').height()) & (count - i > 0) ){
+ 		$('.photos').append("<div class='trio'> <img class='trio_photo new'> <img class='trio_photo new'> <img class='trio_photo new'> </div>");
+ 		$('.new').each(function(index,element){
+ 			i++;
+ 			if ((count - i)>=0){
+ 				$(element).attr('src','images_container_sq/container'+(9+i)+'.jpg');
+ 				$(element).removeClass('new');
+ 			}
+
+ 		});
  	}
 
  									/*конец начальных установок*/
@@ -73,6 +98,18 @@ $(document).ready(function(){
  			$(".logo2").animate({'opacity':'1'},0.4)
  		}
  	// добавление картиночек
+ 	var trigger = $(document).height() - $('.footer').height() - $(window).height() - $(window).scrollTop();
+ 	if ( (trigger < $('.trio').height()) & (count - i > 0) ){
+ 		$('.photos').append("<div class='trio'> <img class='trio_photo new'> <img class='trio_photo new'> <img class='trio_photo new'> </div>");
+ 		$('.new').each(function(index,element){
+ 			i++;
+ 			if ((count - i)>=0){
+ 				$(element).attr('src','images_container_sq/container'+(9+i)+'.jpg');
+ 				$(element).removeClass('new');
+ 			}
+
+ 		});
+ 	}
 
  	});
 

@@ -53,17 +53,12 @@ body{
 	outline: none;
 	background-image: url(images/loopa.png);
 	background-repeat: no-repeat;
-/*	background-position: 4% 50%;
-	text-align: left;  */
 	padding-left: 30px;
+	background-position-y: 50%;
 }
-.onfocus_input{						/*Для установленного фокуса*/
-	background-position: 4% 50%;
-	text-align: left;
-}
-.onblur_input{						/*Когда убираем фокус фокус*/
-	background-position: 40% 50%;
-	text-align: center;
+input::placeholder{
+	overflow-x: hidden;
+	text-overflow: ellipsis;
 }
 .input_image{						/*Положение крестика на краю инпута*/
 	position: absolute;
